@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>spac3d</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<meta name="description" content="">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- CSS  -->
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+	<nav class="z-depth-0">
+		<div class="nav-wrapper">
+			<div class="row">
+				<div class="col s12 ">
+					<a href="index.html" class="brand-logo"><img src="misc/imgs/download.png"></a>
+					<ul class="right">
+						<li><a href="about_us.php">About</a></li>
+						<li><a href="portfolio.php">Portfolio</a></li>
+						<!--						<li><a href="pricelist.php">Pricing</a></li>-->
+						<li><a href="faq.php">FAQ</a></li>
+						<li><a onclick="$('#modal1').modal('open');" class="waves-effect waves-light btn btn-large light-green accent-4">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="header-text white-text">
+
+		<h1>Virtual Tour Creation</h1>
+		<p>We create <b>virtual tours</b> to display your business in <b>3D</b>.<br>
+			Give your customers a more <b>intimate</b> and <b>informative</b> look into your business<br>
+			<b>TODAY!</b></p>
+
+	</div>
+
+
+	<header>
+
+	</header>
+	<div id='nav-bg'></div>
+
+
+	<div id="modal1" class="modal">
+		<div class="modal-header">
+			<a href="#!" class=" right modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+		</div>
+		<div class="modal-content">
+			<h2 class="center-align">Contact Us</h2>
+			<hr>
+			<h5 class="grey-text">Should you have any questions, please do not hesitate to contact us :</h5>
+			<form id="contactform" class="col s12" action="contact.php" method="post">
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="icon_prefix" type="text" class="validate">
+						<label for="icon_prefix" name="fname">Name</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="icon_prefix" type="text" class="validate" name="lname">
+						<label for="icon_prefix">Surname</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="icon_email" type="email" class="validate" name="email">
+						<label for="icon_telephone">E-mail</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="icon_telephone" type="tel" class="validate" name="tel">
+						<label for="icon_telephone">Telephone</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<select name="subject">
+							<option value="1" selected>Support</option>
+							<option value="2">Question</option>
+							<option value="3">Quote Request</option>
+						</select>
+						<label>Subject</label>
+					</div>
+				</div>
+				<div class="input-field col s12">
+					<textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+					<label for="textarea1">Message</label>
+				</div>
+
+				<button href="#!" class="btn waves-effect waves-light right" type="submit" name="action">Send
+					<i class="material-icons right">send</i>
+				</button>
+			</form>
+		</div>
+	</div>
+
+
+	<section id='about'>
+		<div class='container center-align'>
+			<h1 class="center">What we offer</h1>
+			<div class="row left-align">
+				<div class="col s12 m5 l6 ">
+					<div class="card-panel small white hoverable">
+						<span>
+							<span class='icon cam-icon valign-wrapper'></span>
+							<h5>360&#176 Virtual Tour</h5>
+							<p>Transform photos of your space into an interactive three dimensional tour! Give your clients a look into your business in an incredibly engaging way.</p>
+						</span>
+					</div>
+				</div>
+				<div class="col s12 m5 l6">
+					<div class="card-panel small white hoverable">
+						<span>
+							<span class='icon biz-icon'></span>
+							<h5>Google Business Listing Integration</h5>
+							<p>Make your business stand out! Having your business listed on Google's platform is the perfect way to put you on the map.</p>
+						</span>
+					</div>
+				</div>
+				<div class="col s12 m5 l6">
+					<div class="card-panel small white hoverable">
+						<span>
+							<span class='icon map-icon'></span>
+							<h5>Google Maps Integration</h5>
+							<p>Add your tour onto Google's Street View Platform! Now your customers can turn off the street and walk right into your store.</p>
+						</span>
+					</div>
+				</div>
+				<div class="col s12 m5 l6">
+					<div class="card-panel small white hoverable">
+						<span>
+							<span class='icon web-fb-icon'></span>
+							<h5>Website &amp; Facebook Integration</h5>
+							<p>Add your tour to your website or Facebook page to really make it your own!</p>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--
+<div class="call-to-action">
+	<div class="valign-wrapper call-action">
+		<div class="cta-txt center-align">
+			<h1 class="white-text left-align">Call to Action</h1>
+			<p class="white-text center-align">Let's do this!</p>
+
+		</div>
+		<div class="cta-btn right"> <a class="right waves-effect waves-light btn-large ">Hook!</a></div>
+	</div>
+</div>
+-->
+	<div class="parallax-container valign-wrapper">
+		<div class="section center-align">
+			<div class="container valign-wrapper center-align">
+				<div class="cta-txt">
+					<h1 class="white-text left-align">Are YOU ready for the <b>future</b>?</h1>
+				</div>
+				<div class="cta-btn right"> <a onclick="$('#modal1').modal('open');" class="right waves-effect waves-light btn-large ctabtn">Get your quote now!</a></div>
+			</div>
+		</div>
+		<div class="parallax"><img src="misc/imgs/call2action.jpg" alt="CTA Background"></div>
+	</div>
+	<section id='portfolio'>
+		<h1 class="center-align">Our Work</h1>
+		<div class="slider">
+			<ul class="slides">
+				<li>
+					<img src="http://via.placeholder.com/640x360">
+					<div class="caption center-align">
+						<h3>Betty's Bay House</h3>
+						<a onclick="$('#modal2').modal('open');" class="waves-effect waves-light btn-large ">View</a>
+					</div>
+				</li>
+
+				<!--
+				<li>
+					<img src="../MainWeb/misc/imgs/port2.jpg">
+					<div class="caption center-align">
+						<h3>Fancy House Place</h3>
+						<a class="waves-effect waves-light btn-large ">View</a>
+					</div>
+				</li>
+				<li>
+					<img src="../MainWeb/misc/imgs/port3.jpg">
+					<div class="caption center-align">
+						<h3>Fancy House Place</h3>
+						<a class="waves-effect waves-light btn-large ">View</a>
+					</div>
+				</li>
+-->
+				<div id="modal2" class="modal">
+					<div class="modal-header">
+						<a href="#!" class=" right modal-action modal-close waves-effect waves-green btn-flat"> <i class="material-icons">close</i></a>
+					</div>
+					<div class="modal-content">
+						<iframe width='864' height='486' src='https://roundme.com/embed/361898/1230695' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+
+			</ul>
+		</div>
+	</section>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l3 s12 center-align">
+					<i class="material-icons">phone_in_talk</i>
+					<h5 class="white-text">Contact</h5>
+					<p class="grey-text text-lighten-4">Phone us!</p>
+					<a href="tel:+27711386339">071-138-6339</a>
+				</div>
+				<div class="col l3 offset-l1 s12 center-align">
+					<i class="fas fa-link"></i>
+					<h5 class="white-text">Connect</h5>
+					<ul class="social-icons">
+						<li><a href="" class="social-icon"> <i class="fab fa-facebook"></i></a></li>
+						<li><a href="" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+						<li><a href="" class="social-icon"> <i class="fab fa-youtube"></i></a></li>
+						<li><a href="" class="social-icon"> <i class="fab fa-instagram"></i></a></li>
+						<li><a href="" class="social-icon"> <i class="fab fa-whatsapp"></i></a></li>
+					</ul>
+				</div>
+				<div class="col l3 offset-l1 s12 center-align">
+					<i class="material-icons">mail_outline</i>
+					<h5 class="white-text">Customer Service</h5>
+					<p class="grey-text text-lighten-4">Looking for support? Email us!</p>
+					<a href="mailto:support@spac3d.co.za?subject=Support">
+						support@spac3d.co.za</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright center-align">
+			<div class="container">
+				<a href="conditions.php">Terms and Conditions</a> | © 2019 spac3d
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,627 @@
+//@mixin background($imgpath, $position:65% 65%, $repeat: no-repeat) {
+//	background: {
+//		image: url($imgpath);
+//		position: $position;
+//		repeat: $repeat;
+//	}
+//}
+// Small tablets and large smartphones (landscape view)
+$screen-xs-min: 370px;
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 1300px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@mixin cover-background($img-uri) {
+	background: url($img-uri)
+}
+
+// Small devices
+@mixin xs {
+	@media (max-width: #{$screen-xs-min}) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (max-width: #{$screen-sm-min}) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin md {
+	@media (max-width: #{$screen-md-min}) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin lg {
+	@media (max-width: #{$screen-lg-min}) {
+		@content;
+	}
+}
+
+// Extra large devices
+@mixin xl {
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}
+}
+
+// Custom devices
+@mixin rwd($screen) {
+	@media (min-width: $screen+'px') {
+		@content;
+	}
+}
+
+// Z-INDEX TROUBLESHOOTING
+nav {
+	z-index: 4;
+}
+
+header {
+	z-index: 2;
+}
+
+#nav-bg {
+	z-index: 1;
+}
+
+.brand-logo img {
+	width: 11vw;
+	height: auto;
+	padding: 0.2%;
+
+	@include xs {
+		width: 17vw;
+	}
+}
+
+nav ul a {
+	font-size: 1vw;
+
+	@include xs {
+		font-size: 11px !important;
+	}
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5) !important;
+	height: 9% !important;
+
+	@include sm {
+		height: 9vw;
+	}
+}
+
+header {
+	position: relative;
+	padding: 1em;
+	height: 100vh;
+
+	@include sm {
+		height: 74vh;
+	}
+
+	&:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		@include cover-background("../header.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 65% 104%;
+
+		//		opacity: 0.4;
+		@include sm {
+			background-position: 92% 104%;
+		}
+
+		@include md {
+			background-position: 92% 104%;
+		}
+
+		@include lg {
+			background-position: 92% 104%;
+		}
+	}
+}
+
+.light-green.accent-4 {
+	@include sm {
+		height: 24px;
+		width: 78px;
+		padding: 0%;
+		text-size: 20px;
+		font-size: 10px;
+		line-height: 23px;
+		padding: 0 0.5rem;
+	}
+
+	@include md {
+		height: 24px;
+		width: 78px;
+		padding: 0%;
+		text-size: 20px;
+		font-size: 10px;
+		line-height: 23px;
+		padding: 0 0.5rem;
+	}
+
+	@include lg {
+		height: 24px;
+		width: 78px;
+		padding: 0%;
+		text-size: 20px;
+		font-size: 10px;
+		line-height: 23px;
+		padding: 0 0.5rem;
+	}
+}
+
+.header-text {
+	position: absolute;
+	z-index: 3;
+	left: 8%;
+	top: 19%;
+
+	p {
+		padding: 0%;
+		font-size: 1.5vw;
+
+		@include sm {
+
+			font-size: 2vw;
+		}
+
+		@include md {
+
+			font-size: 2vw;
+		}
+	}
+
+	h1 {
+		padding: 0%;
+		font-size: 5.2vw;
+
+		@include sm {
+
+			font-size: 6.2vw;
+		}
+
+		@include md {
+
+			font-size: 6.2vw;
+		}
+
+	}
+
+	@include sm {
+		left: 4%;
+		top: 11%;
+
+	}
+
+	@include md {
+		left: 4%;
+		top: 11%;
+
+	}
+
+}
+
+.parallax-container {
+	height: 400px;
+}
+
+#nav-bg {
+	background: #000000;
+	position: fixed;
+	height: 9%;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 992px) {
+	nav .brand-logo {
+		left: 11% !important;
+	}
+}
+
+//@media (max-width:576px) {
+//	.light-green.accent-4 {
+//		height: 24px;
+//		width: 78px;
+//		padding: 0%;
+//		text-size: 20px;
+//		font-size: 10px;
+//		line-height: 23px;
+//		padding: 0 0.5rem;
+//	}
+//}
+
+//content
+h5 {
+	font-size: 1.60rem !important;
+}
+
+.cta-txt {
+	display: block;
+	position: absolute;
+	left: 9%;
+
+	@include sm {
+
+		position: unset;
+	}
+
+	@include md {
+		position: unset;
+
+	}
+
+	p {
+		margin: 0%;
+
+		@include sm {
+
+			font-size: 2vw;
+		}
+
+		@include md {
+
+			font-size: 2vw;
+		}
+
+		@include lg {
+
+			font-size: 2vw;
+		}
+	}
+
+	h1 {
+		margin: 0%;
+
+		@include sm {
+
+			font-size: 6.2vw;
+		}
+
+		@include md {
+
+			font-size: 6.2vw;
+		}
+
+		@include lg {
+
+			font-size: 4vw;
+		}
+
+	}
+}
+
+.ctabtn {
+	@include sm {
+		height: 24px !important;
+		width: 132px;
+		font-size: 10px !important;
+		line-height: 23px !important;
+		padding: 0 0.2rem !important;
+	}
+
+	@include md {
+		height: 24px !important;
+		width: 132px;
+		font-size: 10px !important;
+		line-height: 23px !important;
+		padding: 0 0.2rem !important;
+	}
+}
+
+.cta-btn {
+	width: 100%;
+	display: block;
+	position: absolute;
+	right: 9%;
+
+	@include sm {
+		height: 24px;
+		width: 78px;
+		padding: 0%;
+		text-size: 20px;
+		font-size: 10px;
+		line-height: 23px;
+		padding: 0 0.5rem;
+	}
+
+	@include md {
+		height: 24px;
+		width: 78px;
+		padding: 0%;
+		text-size: 20px;
+		font-size: 10px;
+		line-height: 23px;
+		padding: 0 0.5rem;
+	}
+}
+
+.cam-icon {
+	@include cover-background("../misc/imgs/360camIcon.jpg");
+	background-color: transparent;
+}
+
+.biz-icon {
+	@include cover-background("../misc/imgs/googleBizIcon.jpg");
+}
+
+.map-icon {
+	@include cover-background("../misc/imgs/mapIcon.jpg");
+}
+
+.web-fb-icon {
+	@include cover-background("../misc/imgs/websiteIcon.jpg");
+}
+
+.icon {
+	height: 140px;
+	width: 121px;
+	display: block;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: auto;
+	float: right;
+	/* padding: 5%; */
+	margin: 1%;
+}
+
+.parallax-container.valign-wrapper {
+	height: 25vw;
+}
+
+#about {
+	padding-bottom: 3%;
+
+	h5 {
+		display: block;
+	}
+
+	P {
+		@include xl {
+			font-size: 17px !important;
+		}
+	}
+}
+
+.slider {
+	margin: auto;
+	width: 70% !important;
+	z-index: 0;
+}
+
+#portfolio {
+	padding: 3% 0% 3% 0%;
+}
+
+.slider .indicators .active {
+	background-color: rgb(1, 78, 160) !important;
+}
+
+.caption {
+	background-color: rgba(0, 0, 255, 0.3);
+	padding-bottom: 4%;
+}
+
+.page-footer {
+	background-color: #3d0ab8 !important;
+}
+
+a.right.waves-effect.waves-light.btn-large {
+	z-index: 0;
+}
+
+.social-icon {
+	color: #fff;
+}
+
+ul.social-icons {
+	margin-top: 10px;
+}
+
+.social-icons li {
+	vertical-align: top;
+	display: inline;
+	height: 100px;
+}
+
+.social-icons a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.fa-facebook {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-facebook:hover {
+	background-color: #3d5b99;
+}
+
+.fa-twitter {
+	padding: 10px 12px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+
+}
+
+.fa-twitter:hover {
+	background-color: #00aced;
+}
+
+.fa-rss {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+
+}
+
+.fa-rss:hover {
+	background-color: #eb8231;
+}
+
+.fa-youtube {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+
+}
+
+.fa-youtube:hover {
+	background-color: #e64a41;
+}
+
+.fa-instagram {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+
+}
+
+.fa-instagram:hover {
+	background-color: #bc2a8d;
+}
+
+.fa-whatsapp {
+	padding: 10px 9px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+
+}
+
+.fa-whatsapp:hover {
+	background-color: #25D366;
+}
+
+.fa-link {
+	height: 24px;
+	width: 24px;
+}
+
+//about us pg
+#main-nav-bg {
+	background: #000000 !important;
+	position: fixed;
+	height: 9%;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#aboutus-page {
+	padding-top: 4%;
+}
+
+#contact-page {
+	padding-top: 8%;
+	padding-bottom: 4%;
+}
+
+.card-image {
+	img {
+		height: 5%;
+		width: auto;
+	}
+}
+
+.pricelist {
+	width: 72vw;
+}
+
+#price-page {
+	padding-top: 6%;
+	padding-bottom: 3%;
+}
+
+#contactform {
+	padding: 3%;
+}
+
+.modal-content {
+	padding: 7%;
+	margin: 7%;
+}
+
+#conditions-page {
+	padding: 5% 15% 3% 15%;
+}
+
+#portfolio-page {
+	padding: 5% 8% 5% 8%;
+}
+
+#faq-page {
+	padding-top: 8%;
+	padding-bottom: 4%;
+}
+
+.collapsible {
+	width: 70%;
+	margin: auto !important;
+	box-shadow: none !important;
+}
+
+#modal2 {
+	max-height: 85%;
+	width: 60%;
+}
+
+#modal2 .modal-content {
+	padding: 2%;
+	margin: 1%;
+}
+
+#modal3 {
+	max-height: 85%;
+	width: 45%;
+}
+
+#modal3 .modal-content {
+	padding: 2%;
+	margin: 1%;
+}
